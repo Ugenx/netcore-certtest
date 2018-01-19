@@ -5,6 +5,10 @@ dotnetcore 2.0 applications were able to access the certificate but not the priv
 The same code running in windows was able to retrieve both certificate and private key.
 
 ## Test Methods
+Self-signed certificate was generated using instructions located on https://help.ubuntu.com/lts/serverguide/certificates-and-security.html
+
+`.pfx` conversion for use in windows testing was accomplished using openssl command: `openssl pkcs12 -export -out server.pfx --inkey server.key -in server.crt`
+
 ### Ubuntu 17.10 - dotNetCore 2.1.4
 `server.crt` placed in `/etc/ssl/certs`
 
